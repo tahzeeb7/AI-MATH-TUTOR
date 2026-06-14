@@ -1,25 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>AI Math Tutor</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MathGPT</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
+
 <body>
 
 <div class="container">
 
-    <h1>🤖 AI Math Tutor</h1>
-    <p>Ask any math question and get step-by-step help</p>
+<h1>🤖 MathGPT</h1>
 
-    <textarea id="question" placeholder="Type your math question here..."></textarea>
+<p>Your AI Math Tutor</p>
 
-    <button onclick="askAI()">Ask AI</button>
+<button class="dark-btn" onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
 
-    <div id="result"></div>
+<textarea
+id="question"
+placeholder="Ask any math question..."
+></textarea>
+
+<div class="buttons">
+
+<button onclick="askAI()">
+🚀 Ask AI
+</button>
+
+<button onclick="startVoice()">
+🎤 Voice
+</button>
+
+</div>
+
+<h3>Examples</h3>
+
+<div class="examples">
+
+<button onclick="fillQuestion('Solve x^2 + 5x + 6 = 0')">
+Quadratic
+</button>
+
+<button onclick="fillQuestion('Derivative of x^3')">
+Derivative
+</button>
+
+<button onclick="fillQuestion('Integrate x^2')">
+Integration
+</button>
+
+</div>
+
+<div id="result"></div>
+
+<h2>Chat History</h2>
+
+<div id="history"></div>
 
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
